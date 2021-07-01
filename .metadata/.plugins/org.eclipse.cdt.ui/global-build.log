@@ -1,0 +1,22 @@
+18:55:45 **** Rebuild of configuration Debug for project SPLabo1EGuillen ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Biblioteca.o" "..\\src\\Biblioteca.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\eLibro.o" "..\\src\\eLibro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" "..\\.metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -o SPLabo1EGuillen.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" "src\\Biblioteca.o" "src\\Controller.o" "src\\LinkedList.o" "src\\eLibro.o" "src\\main.o" "src\\menu.o" "src\\parser.o" 
+Info: Nothing to build for SPLabo1EGuillen
+Info: Nothing to build for SPLabo1EGuillen
+18:57:47 **** Incremental Build of configuration Debug for project SPLabo1EGuillen ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Biblioteca.o" "..\\src\\Biblioteca.c" 
+gcc -o SPLabo1EGuillen.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" "src\\Biblioteca.o" "src\\Controller.o" "src\\LinkedList.o" "src\\eLibro.o" "src\\main.o" "src\\menu.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file SPLabo1EGuillen.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:57:52 **** Incremental Build of configuration Debug for project SPLabo1EGuillen ****
+Info: Internal Builder is used for build
+gcc -o SPLabo1EGuillen.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" "src\\Biblioteca.o" "src\\Controller.o" "src\\LinkedList.o" "src\\eLibro.o" "src\\main.o" "src\\menu.o" "src\\parser.o" 

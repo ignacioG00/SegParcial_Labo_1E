@@ -1,0 +1,6 @@
+18:57:52 **** Incremental Build of configuration Debug for project SPLabo1EGuillen ****
+Info: Internal Builder is used for build
+gcc -o SPLabo1EGuillen.exe ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" "src\\Biblioteca.o" "src\\Controller.o" "src\\LinkedList.o" "src\\eLibro.o" "src\\main.o" "src\\menu.o" "src\\parser.o" 
+
+18:57:52 Build Finished. 0 errors, 0 warnings. (took 254ms)
+
