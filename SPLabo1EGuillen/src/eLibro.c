@@ -16,17 +16,18 @@ eLibro* book_new(void)
 {
 	eLibro* auxiliarP = NULL;
 	auxiliarP = (eLibro*) malloc(sizeof(eLibro));
-	if(auxiliarP!=NULL)
-		{
-			auxiliarP->id=0;
-			strcpy(auxiliarP->titulo,"");
-			strcpy(auxiliarP->autor,"");
-			auxiliarP->precio=0;
-			auxiliarP->editorialId=0;
-		}
 	return auxiliarP;
 }
-
+/**
+ * brief Nueva estructura de Libros ingresando los valores por parametros.
+ * param idStr parametro que recibe el ID a cargar.
+ * param tituloStr recibe el titulo del libro.
+ * param autorStr  recibe el nombre del autor.
+ * param precioStr  recibe el precio del libro.
+ * param editorialIdStr recibe la editorial.
+ * return this retorna el Libro auxiliar con los datos que se recibieron por parametro, caso contrario retorna NULL.
+ *
+ */
 eLibro* book_newParametros(char* idStr,char* tituloStr,char* autorStr,char* precioStr, char* editorialIdStr)
 {
 	eLibro* pAuxLibro = book_new();
@@ -54,6 +55,13 @@ void book_delete(eLibro* this)
 		free(this);
 	}
 }
+/**
+ * brief Obtiene el titulo del Libro de la estructura eLibro.
+ * param this puntero a eLibro.
+ * param titulo puntero a la cadena titulo del eLibro
+ * return retorna 1 Si pudo obtener el titulo y 0 si no pudo obtener
+ *
+ */
 
 int book_setTitulo(eLibro* this,char* titulo)
 {
@@ -66,7 +74,13 @@ int book_setTitulo(eLibro* this,char* titulo)
 	}
 	return retorno;
 }
-
+/** \brief Coloca el titulo del Libro en una estructura Libro.
+ *
+ * param this puntero a Libro.
+ * param titulo cadena que se colocara el titulo del Libro
+ * return retorna 1 si se pudo colocar el titulo, y 0 si no se coloco
+ *
+ */
 int book_getTitulo(eLibro* this,char* titulo)
 {
 	int retorno = 0;
@@ -78,7 +92,13 @@ int book_getTitulo(eLibro* this,char* titulo)
 	}
 	return retorno;
 }
-
+/**
+ * brief Obtiene el autor del Libro de la estructura eLibro.
+ * param this puntero a eLibro.
+ * param autor puntero a la cadena autor del eLibro
+ * return retorna 1 Si pudo obtener el autor y 0 si no pudo obtener
+ *
+ */
 int book_setAutor(eLibro* this,char* autor)
 {
 	int retorno = 0;
@@ -90,7 +110,13 @@ int book_setAutor(eLibro* this,char* autor)
 	}
 	return retorno;
 }
-
+/** \brief Coloca el autor del Libro en una estructura Libro.
+ *
+ * param this puntero a Libro.
+ * param autor cadena que se colocara el autor del Libro
+ * return retorna 1 si se pudo colocar el autor, y 0 si no se coloco
+ *
+ */
 int book_getAutor(eLibro* this,char* autor)
 {
 	int retorno = 0;
@@ -103,7 +129,13 @@ int book_getAutor(eLibro* this,char* autor)
 	return retorno;
 }
 
-
+/**
+ * brief Obtiene el id del Libro de la estructura eLibro.
+ * param this puntero a eLibro.
+ * param id puntero a la cadena autor del eLibro
+ * return retorna 1 Si pudo obtener el id y 0 si no pudo obtener
+ *
+ */
 int book_setId(eLibro* this,int id)
 {
 	int retorno = 0;
@@ -115,7 +147,13 @@ int book_setId(eLibro* this,int id)
 	}
 	return retorno;
 }
-
+/** \brief Coloca el id del Libro en una estructura Libro.
+ *
+ * param this puntero a Libro.
+ * param id cadena que se colocara el id del Libro
+ * return retorna 1 si se pudo colocar el id, y 0 si no se coloco
+ *
+ */
 int book_getId(eLibro* this,int* id)
 {
 	int retorno = 0;
@@ -128,6 +166,14 @@ int book_getId(eLibro* this,int* id)
 	return retorno;
 }
 
+/**
+ * brief Obtiene el precio del Libro de la estructura eLibro.
+ * param this puntero a eLibro.
+ * param precio puntero a la cadena autor del eLibro
+ * return retorna 1 Si pudo obtener el precio y 0 si no pudo obtener
+ *
+ */
+
 int book_setPrecio(eLibro* this,int precio)
 {
 	int retorno=0;
@@ -139,7 +185,13 @@ int book_setPrecio(eLibro* this,int precio)
 	}
 	return retorno;
 }
-
+/** \brief Coloca el precio del Libro en una estructura Libro.
+ *
+ * param this puntero a Libro.
+ * param precio cadena que se colocara el precio del Libro
+ * return retorna 1 si se pudo colocar el precio, y 0 si no se coloco
+ *
+ */
 int book_getPrecio(eLibro* this,int* precio)
 {
 	int retorno=0;
@@ -152,6 +204,13 @@ int book_getPrecio(eLibro* this,int* precio)
 	return retorno;
 }
 
+/**
+ * brief Obtiene el editorialId del Libro de la estructura eLibro.
+ * param this puntero a eLibro.
+ * param editorialId puntero a la cadena editorialId del eLibro
+ * return retorna 1 Si pudo obtener el editorialId y 0 si no pudo obtener
+ *
+ */
 int book_setEditorialId(eLibro* this,int editorialId)
 {
 	int retorno=0;
@@ -162,6 +221,14 @@ int book_setEditorialId(eLibro* this,int editorialId)
 	}
 	return retorno;
 }
+
+/** \brief Coloca el id del editorial del Libro en una estructura Libro.
+ *
+ * param this puntero a Libro.
+ * param editorialId cadena que se colocara el editorialId del Libro
+ * return retorna 1 si se pudo colocar el editorialId, y 0 si no se coloco
+ *
+ */
 int book_getEditorialId(eLibro* this,int* editorialId)
 {
 	int retorno=0;
@@ -237,6 +304,7 @@ int book_IdToEditorial(int id, char* editorialIdStr)
 	}
 	return retorno;
 }
+
 int book_sortPrecio(void* thisOne, void* thisTwo)
 {
 	int retorno=0;

@@ -66,7 +66,7 @@ int controller_loadFromText(char* path , LinkedList* pArrayListLibro)
  *
  * \param path char*
  * \param pArrayListBook LinkedList*
- * \return int
+ * \return int 0 error, 1 esta ok
  *
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListBook)
@@ -108,7 +108,7 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListBook)
  *
  * \param path char*
  * \param pArrayListBook LinkedList*
- * \return int
+ * \return int 0 error, 1 esta ok
  *
  */
 int controller_ListBook(LinkedList* pArrayListBook)
