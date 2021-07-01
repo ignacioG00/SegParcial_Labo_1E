@@ -36,13 +36,17 @@ int menu(void){
 					printf("El archivo ya fue cargado");
 				}
 				break;
-
 			case 2:
-				controller_sortBook(listaLibros);
-
-				if(validate_Exit_SN("Desea imprimir una lista ordenada?S/N","Error.Reingrese"))
+				if(firstFlag!=0)
 				{
-					controller_ListBook(listaLibros);
+					controller_sortBook(listaLibros);
+
+					if(validate_Exit_SN("Desea imprimir una lista ordenada?S/N","Error.Reingrese"))
+					{
+						controller_ListBook(listaLibros);
+					}
+				}else{
+					printf("Primero debe cargar un archivo\n");
 				}
 				break;
 	        case 3:
@@ -79,6 +83,7 @@ int menu(void){
 	        	}
 	    	}
 	    }while(option != 6);
+
 	    puts("\n PROYECTO FINALIZADO! MUCHAS GRACIAS POR UTILIZARLO!");
 	    return 0;
 }

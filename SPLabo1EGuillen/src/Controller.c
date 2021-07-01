@@ -19,7 +19,7 @@
  *
  * \param path char*
  * \param pArrayListBook LinkedList*
- * \return int
+ * \return int -1 error 0 esta ok
  *
  */
 // RETORNO -1 error 0 esta ok

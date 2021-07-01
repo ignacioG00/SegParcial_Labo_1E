@@ -303,8 +303,8 @@ int subMenu(int* auxOpcion)
 			" 2. Ordenar empleados\n"
 			" 3. Listar empleados\n"
 			" 4. Realizar descuentos a los precios según:"
-			"* Planeta: 20% (si el monto es mayor o igual a $300)"
-			"* SIGLO XXI EDITORES: 10% (si el monto es menor o igual a $200)"
+			" - Planeta: 20% (si el monto es mayor o igual a $300)"
+			" - SIGLO XXI EDITORES: 10% (si el monto es menor o igual a $200)"
 			" 5. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n"
 			" 6. Salir\n"
 			"***********************************************************************************/\n",
@@ -315,8 +315,8 @@ int subMenu(int* auxOpcion)
 			" 2. Ordenar empleados\n"
 			" 3. Listar empleados\n"
 			" 4. Realizar descuentos a los precios según:"
-			" L Planeta: 20% (si el monto es mayor o igual a $300)"
-			" L SIGLO XXI EDITORES: 10% (si el monto es menor o igual a $200)"
+			" - Planeta: 20% (si el monto es mayor o igual a $300)"
+			" - SIGLO XXI EDITORES: 10% (si el monto es menor o igual a $200)"
 			" 5. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n"
 			" 6. Salir\n"
 			"***********************************************************************************/\n",0, 11, 2)==0)
